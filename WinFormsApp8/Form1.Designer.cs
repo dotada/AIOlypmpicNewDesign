@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            buttonSTI = new Button();
             buttonTTI = new Button();
+            buttonSTI = new Button();
             panel3 = new Panel();
             label1 = new Label();
             richTextBox1 = new RichTextBox();
@@ -57,22 +57,6 @@
             panel1.Size = new Size(140, 697);
             panel1.TabIndex = 0;
             // 
-            // buttonSTI
-            // 
-            buttonSTI.FlatAppearance.BorderSize = 0;
-            buttonSTI.FlatStyle = FlatStyle.Flat;
-            buttonSTI.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonSTI.Image = (Image)resources.GetObject("buttonSTI.Image");
-            buttonSTI.Location = new Point(0, 485);
-            buttonSTI.Name = "buttonSTI";
-            buttonSTI.Size = new Size(140, 160);
-            buttonSTI.TabIndex = 2;
-            buttonSTI.Text = "Sketch to Image";
-            buttonSTI.TextAlign = ContentAlignment.BottomCenter;
-            buttonSTI.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonSTI.UseVisualStyleBackColor = true;
-            buttonSTI.Click += buttonSTI_Click;
-            // 
             // buttonTTI
             // 
             buttonTTI.FlatAppearance.BorderSize = 0;
@@ -83,11 +67,27 @@
             buttonTTI.Name = "buttonTTI";
             buttonTTI.Size = new Size(140, 160);
             buttonTTI.TabIndex = 1;
-            buttonTTI.Text = "Text to Image";
+            buttonTTI.Text = "Текст към снимка";
             buttonTTI.TextAlign = ContentAlignment.BottomCenter;
             buttonTTI.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonTTI.UseVisualStyleBackColor = true;
             buttonTTI.Click += buttonTTI_Click;
+            // 
+            // buttonSTI
+            // 
+            buttonSTI.FlatAppearance.BorderSize = 0;
+            buttonSTI.FlatStyle = FlatStyle.Flat;
+            buttonSTI.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSTI.Image = (Image)resources.GetObject("buttonSTI.Image");
+            buttonSTI.Location = new Point(0, 485);
+            buttonSTI.Name = "buttonSTI";
+            buttonSTI.Size = new Size(140, 160);
+            buttonSTI.TabIndex = 2;
+            buttonSTI.Text = "Скица към снимка";
+            buttonSTI.TextAlign = ContentAlignment.BottomCenter;
+            buttonSTI.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonSTI.UseVisualStyleBackColor = true;
+            buttonSTI.Click += buttonSTI_Click;
             // 
             // panel3
             // 
@@ -124,11 +124,11 @@
             // 
             label2.Font = new Font("Century Gothic", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(138, 0);
+            label2.Location = new Point(156, 0);
             label2.Name = "label2";
-            label2.Size = new Size(662, 62);
+            label2.Size = new Size(632, 62);
             label2.TabIndex = 3;
-            label2.Text = "Prompt:";
+            label2.Text = "Текст:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelLeft
@@ -146,7 +146,7 @@
             button1.Name = "button1";
             button1.Size = new Size(632, 34);
             button1.TabIndex = 5;
-            button1.Text = "Generate";
+            button1.Text = "Генерирай";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -157,7 +157,7 @@
             label3.Name = "label3";
             label3.Size = new Size(632, 38);
             label3.TabIndex = 6;
-            label3.Text = "Idle";
+            label3.Text = "Пауза";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
