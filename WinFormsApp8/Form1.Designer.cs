@@ -93,7 +93,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.Gray;
+            panel3.BackColor = Color.LightGray;
             panel3.Controls.Add(label1);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
@@ -104,11 +104,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(12, 19);
+            label1.ImageAlign = ContentAlignment.MiddleRight;
+            label1.Location = new Point(25, 21);
             label1.Name = "label1";
-            label1.Size = new Size(120, 24);
+            label1.Size = new Size(100, 21);
             label1.TabIndex = 0;
             label1.Text = "AI ArtVision";
             // 
@@ -121,7 +121,7 @@
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(512, 135);
             richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "Описание тук";
+            richTextBox1.Text = "x";
             richTextBox1.Enter += TBox_Enter;
             richTextBox1.Leave += TBox_Leave;
             // 
@@ -194,6 +194,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
+            MouseDown += Form1_MouseDown;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
