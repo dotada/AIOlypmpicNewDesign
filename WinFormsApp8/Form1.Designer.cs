@@ -62,6 +62,7 @@
             buttonTTI.FlatAppearance.BorderSize = 0;
             buttonTTI.FlatStyle = FlatStyle.Flat;
             buttonTTI.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonTTI.ForeColor = Color.Black;
             buttonTTI.Image = (Image)resources.GetObject("buttonTTI.Image");
             buttonTTI.Location = new Point(0, 170);
             buttonTTI.Name = "buttonTTI";
@@ -78,6 +79,7 @@
             buttonSTI.FlatAppearance.BorderSize = 0;
             buttonSTI.FlatStyle = FlatStyle.Flat;
             buttonSTI.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSTI.ForeColor = Color.Black;
             buttonSTI.Image = (Image)resources.GetObject("buttonSTI.Image");
             buttonSTI.Location = new Point(0, 485);
             buttonSTI.Name = "buttonSTI";
@@ -91,7 +93,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.Yellow;
+            panel3.BackColor = Color.Gray;
             panel3.Controls.Add(label1);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
@@ -101,8 +103,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(62, 120, 138);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(12, 19);
             label1.Name = "label1";
             label1.Size = new Size(120, 24);
@@ -111,29 +114,32 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.BackColor = Color.FromArgb(61, 66, 77);
+            richTextBox1.BackColor = Color.Silver;
             richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.ForeColor = Color.FromArgb(62, 120, 138);
+            richTextBox1.ForeColor = SystemColors.WindowFrame;
             richTextBox1.Location = new Point(156, 65);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(632, 135);
+            richTextBox1.Size = new Size(512, 135);
             richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            richTextBox1.Text = "Описание тук";
+            richTextBox1.Enter += TBox_Enter;
+            richTextBox1.Leave += TBox_Leave;
             // 
             // label2
             // 
+            label2.BackColor = Color.LightGray;
             label2.Font = new Font("Century Gothic", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(156, 0);
             label2.Name = "label2";
-            label2.Size = new Size(632, 62);
+            label2.Size = new Size(512, 62);
             label2.TabIndex = 3;
-            label2.Text = "Текст:";
+            label2.Text = "Описание:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelLeft
             // 
-            panelLeft.BackColor = Color.FromArgb(192, 192, 0);
+            panelLeft.BackColor = Color.Gray;
             panelLeft.Location = new Point(143, 170);
             panelLeft.Name = "panelLeft";
             panelLeft.Size = new Size(7, 160);
@@ -142,9 +148,10 @@
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(156, 206);
             button1.Name = "button1";
-            button1.Size = new Size(632, 34);
+            button1.Size = new Size(512, 34);
             button1.TabIndex = 5;
             button1.Text = "Генерирай";
             button1.UseVisualStyleBackColor = true;
@@ -153,9 +160,10 @@
             // label3
             // 
             label3.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(156, 243);
             label3.Name = "label3";
-            label3.Size = new Size(632, 38);
+            label3.Size = new Size(512, 38);
             label3.TabIndex = 6;
             label3.Text = "Пауза";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -165,15 +173,15 @@
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Location = new Point(156, 284);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(632, 401);
+            pictureBox1.Size = new Size(512, 400);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.FromArgb(41, 44, 51);
-            ClientSize = new Size(800, 697);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(681, 697);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(button1);

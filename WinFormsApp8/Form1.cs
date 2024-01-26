@@ -25,6 +25,16 @@ namespace WinFormsApp8
             panelLeft.Top = buttonSTI.Top;
         }
 
+        private void TBox_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TBox_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
         async private void button1_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
@@ -33,7 +43,7 @@ namespace WinFormsApp8
             buttonTTI.Enabled = false;
             string api = "r8_CpEV9rxO6YDK6DZm7UIdU5RpEBg5zLs30irHq";
             string aurl = "https://api.replicate.com/v1/predictions";
-            label2.Text = "Пращане на заявка";
+            label3.Text = "Пращане на заявка";
             string text = richTextBox1.Text;
             using (HttpClient client = new())
             {
@@ -56,7 +66,7 @@ namespace WinFormsApp8
                 if (response.IsSuccessStatusCode)
                 {
                     string res = await response.Content.ReadAsStringAsync();
-                    label2.Text = "Генериране";
+                    label3.Text = "Генериране";
                     JsonDocument jsondoc = JsonDocument.Parse(res);
                     if (jsondoc.RootElement.TryGetProperty("urls", out JsonElement urlsProperty))
                     {
@@ -87,7 +97,7 @@ namespace WinFormsApp8
                                     pictureBox1.LoadAsync(url);
                                 }
                             }
-                            label2.Text = "Пауза";
+                            label3.Text = "Пауза";
                             button1.Enabled = true;
                             richTextBox1.ReadOnly = false;
                             buttonSTI.Enabled = true;
@@ -101,7 +111,7 @@ namespace WinFormsApp8
                     richTextBox1.ReadOnly = false;
                     buttonSTI.Enabled = true;
                     buttonTTI.Enabled = true;
-                    label2.Text = "Грешка";
+                    label3.Text = "Грешка";
                     Debug.WriteLine(response.ToString());
                 }
             }
