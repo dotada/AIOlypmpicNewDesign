@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp8
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel1 = new Panel();
             buttonTTI = new Button();
             buttonSTI = new Button();
@@ -40,6 +40,8 @@
             button1 = new Button();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
+            richTextBox2 = new RichTextBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -121,7 +123,7 @@
             richTextBox1.ForeColor = SystemColors.WindowFrame;
             richTextBox1.Location = new Point(156, 65);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(512, 135);
+            richTextBox1.Size = new Size(512, 95);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "Описание...";
             richTextBox1.Enter += TBox_Enter;
@@ -142,7 +144,7 @@
             // panelLeft
             // 
             panelLeft.BackColor = Color.Gray;
-            panelLeft.Location = new Point(143, 170);
+            panelLeft.Location = new Point(143, 485);
             panelLeft.Name = "panelLeft";
             panelLeft.Size = new Size(7, 160);
             panelLeft.TabIndex = 4;
@@ -179,11 +181,36 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // Form1
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(156, 166);
+            button2.Name = "button2";
+            button2.Size = new Size(149, 34);
+            button2.TabIndex = 8;
+            button2.Text = "Избери снимка";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.BackColor = Color.Silver;
+            richTextBox2.BorderStyle = BorderStyle.None;
+            richTextBox2.ForeColor = SystemColors.WindowFrame;
+            richTextBox2.Location = new Point(311, 166);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.ReadOnly = true;
+            richTextBox2.Size = new Size(357, 34);
+            richTextBox2.TabIndex = 9;
+            richTextBox2.Text = "";
+            // 
+            // Form2
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.LightGray;
             ClientSize = new Size(681, 697);
+            Controls.Add(richTextBox2);
+            Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(button1);
@@ -194,9 +221,9 @@
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.FromArgb(62, 120, 138);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "Form2";
             Text = "Form1";
-            MouseDown += Form1_MouseDown;
+            MouseDown += Form2_MouseDown;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -217,5 +244,7 @@
         private Button button1;
         private Label label3;
         private PictureBox pictureBox1;
+        private Button button2;
+        private RichTextBox richTextBox2;
     }
 }

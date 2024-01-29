@@ -5,7 +5,7 @@ using System.Text;
 namespace WinFormsApp8
 {
 
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -15,7 +15,7 @@ namespace WinFormsApp8
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void Form2_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -24,7 +24,7 @@ namespace WinFormsApp8
             }
         }
 
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
