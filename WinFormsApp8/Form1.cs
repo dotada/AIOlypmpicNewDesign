@@ -45,12 +45,15 @@ namespace WinFormsApp8
 
         private void TBox_Enter(object sender, EventArgs e)
         {
-            
+            richTextBox1.Text = string.Empty;
         }
 
         private void TBox_Leave(object sender, EventArgs e)
         {
-            
+            if (richTextBox1.Text.Trim() == string.Empty)
+            {
+                richTextBox1.Text = "Описание...";
+            }
         }
 
         async private void button1_Click(object sender, EventArgs e)

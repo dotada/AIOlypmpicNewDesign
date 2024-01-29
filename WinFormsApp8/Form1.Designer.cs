@@ -121,7 +121,7 @@
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(512, 135);
             richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "x";
+            richTextBox1.Text = "Описание...";
             richTextBox1.Enter += TBox_Enter;
             richTextBox1.Leave += TBox_Leave;
             // 
