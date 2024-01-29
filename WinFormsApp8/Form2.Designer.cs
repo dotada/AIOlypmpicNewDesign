@@ -178,6 +178,7 @@
             pictureBox1.Location = new Point(156, 284);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(512, 400);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -191,6 +192,7 @@
             button2.TabIndex = 8;
             button2.Text = "Избери снимка";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // richTextBox2
             // 
@@ -223,6 +225,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             Text = "Form1";
+            FormClosed += f2_Closed;
             MouseDown += Form2_MouseDown;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);

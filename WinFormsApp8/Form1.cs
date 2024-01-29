@@ -29,6 +29,11 @@ namespace WinFormsApp8
             InitializeComponent();
         }
 
+        public void closeForms()
+        {
+            Application.Exit();
+        }
+
         private void buttonTTI_Click(object sender, EventArgs e)
         {
             /*
@@ -39,8 +44,14 @@ namespace WinFormsApp8
 
         private void buttonSTI_Click(object sender, EventArgs e)
         {
-            panelLeft.Height = buttonSTI.Height;
-            panelLeft.Top = buttonSTI.Top;
+            Form2 f2 = new();
+            f2.Show();
+            Hide();
+        }
+
+        private void f1_Closed(object sener, FormClosedEventArgs e)
+        {
+            closeForms();
         }
 
         private void TBox_Enter(object sender, EventArgs e)

@@ -196,6 +196,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
+            FormClosed += f1_Closed;
             MouseDown += Form1_MouseDown;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
