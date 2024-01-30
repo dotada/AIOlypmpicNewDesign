@@ -65,7 +65,7 @@ namespace WinFormsApp8
         {
             button2.Enabled = false;
             button1.Enabled = false;
-            label1.Text = "Качване на снимка...";
+            label3.Text = "Качване на снимка...";
             using (var multipartFormContent = new MultipartFormDataContent())
             {
                 HttpClient client = new();
@@ -97,7 +97,7 @@ namespace WinFormsApp8
                             ""adapter_conditioning_factor"": 1
                         }}
                     }}";
-                    label1.Text = "Пускане на заявка";
+                    label3.Text = "Пускане на заявка";
                     HttpContent content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
                     response = await client.PostAsync(aurl, content);
                     if (response.IsSuccessStatusCode)
@@ -108,7 +108,7 @@ namespace WinFormsApp8
                         {
                             if (urlsProperty.TryGetProperty("get", out JsonElement getUrlProperty))
                             {
-                                label1.Text = "Генериране";
+                                label3.Text = "Генериране";
                                 string getUrl = getUrlProperty.GetString();
                                 string status = "generating";
                                 Thread.Sleep(3000);
@@ -144,7 +144,7 @@ namespace WinFormsApp8
                                         index++;
                                     }
                                 }
-                                label1.Text = "Пауза";
+                                label3.Text = "Пауза";
                                 button2.Enabled = true;
                                 button1.Enabled = true;
                             }
@@ -155,13 +155,14 @@ namespace WinFormsApp8
                         Debug.WriteLine("Грешка");
                         Debug.WriteLine(await response.Content.ReadAsStringAsync());
                         button2.Enabled = true;
+                        label3.Text = "Грешка";
                         button1.Enabled = true;
                     }
                 }
                 else
                 {
                     Debug.WriteLine("Error uploading image!");
-                    label1.Text = "Грешка";
+                    label3.Text = "Грешка";
                     button2.Enabled = true;
                     button1.Enabled = true;
                 }
