@@ -42,6 +42,7 @@
             pictureBox1 = new PictureBox();
             button2 = new Button();
             richTextBox2 = new RichTextBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -206,11 +207,24 @@
             richTextBox2.TabIndex = 9;
             richTextBox2.Text = "";
             // 
+            // button3
+            // 
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.Red;
+            button3.Location = new Point(640, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(29, 30);
+            button3.TabIndex = 10;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form2
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.LightGray;
             ClientSize = new Size(681, 697);
+            Controls.Add(button3);
             Controls.Add(richTextBox2);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
@@ -249,5 +263,6 @@
         private PictureBox pictureBox1;
         private Button button2;
         private RichTextBox richTextBox2;
+        private Button button3;
     }
 }

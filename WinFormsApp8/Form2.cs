@@ -186,5 +186,11 @@ namespace WinFormsApp8
             Form1 f1 = new();
             f1.closeForms();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new();
+            f1.closeForms();
+        }
     }
 }
