@@ -101,6 +101,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(140, 62);
             panel3.TabIndex = 0;
+            panel3.MouseDown += Form1_MouseDown;
             // 
             // label1
             // 
@@ -114,6 +115,7 @@
             label1.Size = new Size(117, 19);
             label1.TabIndex = 0;
             label1.Text = "AI ArtVision";
+            label1.MouseDown += Form1_MouseDown;
             // 
             // richTextBox1
             // 
@@ -139,6 +141,7 @@
             label2.TabIndex = 3;
             label2.Text = "Описание:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.MouseDown += Form1_MouseDown;
             // 
             // panelLeft
             // 
