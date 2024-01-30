@@ -33,10 +33,9 @@ namespace WinFormsApp8
 
         private void buttonTTI_Click(object sender, EventArgs e)
         {
-            /*
-            panelLeft.Height = buttonTTI.Height;
-            panelLeft.Top = buttonTTI.Top;
-            */
+            Form1 f1 = new();
+            f1.Show();
+            Hide();
         }
 
         private void buttonSTI_Click(object sender, EventArgs e)
