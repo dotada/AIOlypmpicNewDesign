@@ -61,7 +61,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.DarkGray;
+            pictureBox2.BackColor = Color.LightGray;
             pictureBox2.ImageLocation = "https://images.dejacraft.uk/logo.png";
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";

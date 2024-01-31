@@ -63,11 +63,12 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.DarkGray;
+            pictureBox2.BackColor = Color.LightGray;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.ImageLocation = "https://images.dejacraft.uk/logo.png";
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(140, 164);
+            pictureBox2.Size = new Size(140, 160);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
