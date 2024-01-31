@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             buttonTTI = new Button();
             buttonSTI = new Button();
             panel3 = new Panel();
-            label1 = new Label();
             richTextBox1 = new RichTextBox();
             label2 = new Label();
             panelLeft = new Panel();
@@ -44,12 +44,13 @@
             richTextBox2 = new RichTextBox();
             button3 = new Button();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(buttonTTI);
             panel1.Controls.Add(buttonSTI);
             panel1.Controls.Add(panel3);
@@ -59,6 +60,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(140, 697);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.DarkGray;
+            pictureBox2.ImageLocation = "https://images.dejacraft.uk/logo.png";
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(140, 164);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
             // buttonTTI
             // 
@@ -97,27 +109,12 @@
             // panel3
             // 
             panel3.BackColor = Color.LightGray;
-            panel3.Controls.Add(label1);
             panel3.Font = new Font("CaskaydiaCove NF", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(140, 62);
             panel3.TabIndex = 0;
             panel3.MouseDown += Form2_MouseDown;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("CaskaydiaCove NF", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(12, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(117, 19);
-            label1.TabIndex = 0;
-            label1.Text = "AI ArtVision";
-            label1.MouseDown += Form2_MouseDown;
             // 
             // richTextBox1
             // 
@@ -185,6 +182,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
+            pictureBox1.MouseDown += Form2_MouseDown;
             // 
             // button2
             // 
@@ -245,8 +243,7 @@
             FormClosed += f2_Closed;
             MouseDown += Form2_MouseDown;
             panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -255,7 +252,6 @@
 
         private Panel panel1;
         private Panel panel3;
-        private Label label1;
         private Button buttonTTI;
         private Button buttonSTI;
         private RichTextBox richTextBox1;
@@ -267,5 +263,6 @@
         private Button button2;
         private RichTextBox richTextBox2;
         private Button button3;
+        private PictureBox pictureBox2;
     }
 }
